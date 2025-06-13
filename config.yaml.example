@@ -1,0 +1,38 @@
+# YNAB Red Flag Transaction Tracker Configuration
+
+# Report Settings
+reports:
+  # Default output format (pdf, csv, or excel)
+  default_format: "pdf"
+  
+  # Directory to store generated reports
+  output_directory: "reports"
+  
+  # Report scheduling
+  schedule:
+    daily:
+      enabled: true
+      time: "18:00"
+    
+    weekly:
+      enabled: true
+      day: "monday"
+      time: "18:00"
+    
+    monthly:
+      enabled: true
+      day: 1  # First day of the month
+      time: "18:00"
+
+# Email Settings (for future implementation)
+email:
+  enabled: false
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  sender_email: "your-email@gmail.com"
+  recipient_email: "recipient@example.com"
+
+# Default date ranges for reports
+date_ranges:
+  default_days: 30
+  fiscal_year_start: "01-01"  # MM-DD format 
